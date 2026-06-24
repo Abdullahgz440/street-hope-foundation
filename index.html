@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Street Hope Development and Charity Foundation | Global Impact from Kano, Nigeria</title>
+    
+    <!-- Meta Tags for SEO & Trust -->
+    <meta name="description" content="Street Hope Foundation is a global-standard NGO dedicated to child welfare, youth empowerment, and sustainable community development in Nigeria.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-dark: #0a3d1d; /* Deep Institutional Green */
+            --primary-brand: #1b5e20;
+            --accent-gold: #fbc02d;
+            --pure-white: #ffffff;
+            --light-gray: #f4f7f6;
+            --text-main: #1a1a1a;
+            --text-muted: #4a4a4a;
+            --container-width: 1200px;
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            line-height: 1.8;
+            color: var(--text-main);
+            background-color: var(--pure-white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; text-transform: uppercase; letter-spacing: -1px; }
+        .serif { font-family: 'Playfair Display', serif; text-transform: none; font-weight: 700; letter-spacing: 0; }
+
+        /* HEADER & NAVIGATION */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 8%;
+            background: var(--pure-white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            height: 90px; /* Fixed height for perfect centering */
+        }
+        .logo-box {
+            display: flex;
+            align-items: center;
+        }
+        .logo { 
+            font-size: 1.1rem; 
+            font-weight: 800; 
+            color: var(--primary-dark); 
+            text-decoration: none; 
+            border-left: 4px solid var(--accent-gold); 
+            padding-left: 15px; 
+            line-height: 1.1; 
+            display: block;
+        }
+        /* DROPDOWN MENU STYLING */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropbtn {
+            background: none;
+            border: 2px solid var(--primary-dark);
+            color: var(--primary-dark);
+            padding: 10px 20px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+        .dropbtn:hover {
+            background: var(--primary-dark);
+            color: white;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: var(--pure-white);
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-top: 3px solid var(--accent-gold);
+        }
+        .dropdown-content a {
+            color: var(--text-main);
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            font-weight: 700;
+            font-size: 0.8rem;
+            border-bottom: 1px solid #f1f1f1;
+            margin-left: 0 !important; /* Reset margin from nav-links a */
+        }
+        .dropdown-content a:hover {
+            background-color: var(--light-gray);
+            color: var(--primary-brand);
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Adjust Nav for Dropdown */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .donate-btn-nav { 
+            background: var(--primary-brand); 
+            color: white !important; 
+            padding: 12px 24px; 
+            border-radius: 4px;
+            margin-left: 30px !important;
+            height: auto;
+            line-height: 1;
+        }
+
+        /* HERO SECTION - WORLD CLASS STANDARD */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(10, 61, 29, 0.7), rgba(10, 61, 29, 0.5)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+            color: var(--pure-white);
+            padding: 0 8%;
+        }
+        .hero-content { max-width: 800px; }
+        .hero h1 { font-size: 4.5rem; margin-bottom: 20px; line-height: 1; }
+        .hero p { font-size: 1.4rem; font-weight: 400; margin-bottom: 40px; opacity: 0.9; }
+
+        /* STATS BAR */
+        .stats-bar { background: var(--primary-dark); color: white; padding: 40px 8%; display: flex; justify-content: space-around; text-align: center; }
+        .stat-item h2 { font-size: 3rem; color: var(--accent-gold); margin: 0; }
+        .stat-item p { text-transform: uppercase; font-weight: 700; font-size: 0.8rem; margin: 5px 0 0; }
+
+        /* MISSION SECTION */
+        .mission { padding: 120px 8%; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        .mission h2 { font-size: 2.5rem; color: var(--primary-dark); margin-bottom: 30px; }
+        .mission p { font-size: 1.15rem; color: var(--text-muted); }
+
+        /* AIMS & OBJECTIVES - HIGH IMPACT DESIGN */
+        .objectives { background: var(--light-gray); padding: 120px 8%; }
+        .section-tag { color: var(--primary-brand); font-weight: 800; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 10px; text-align: center; }
+        .section-title { text-align: center; font-size: 3rem; margin-bottom: 80px; color: var(--primary-dark); }
+        
+        .obj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+        .obj-item { background: white; padding: 60px 40px; border-bottom: 6px solid var(--accent-gold); transition: 0.4s; }
+        .obj-item:hover { transform: translateY(-15px); box-shadow: 0 30px 60px rgba(0,0,0,0.1); }
+        .obj-num { font-size: 1rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 20px; display: block; }
+        .obj-item h3 { font-size: 1.3rem; margin-bottom: 20px; color: var(--primary-dark); }
+        .obj-item p { font-size: 0.95rem; color: var(--text-muted); }
+
+        /* PROGRAM CARDS - IMAGE FOCUS */
+        .programs { padding: 120px 8%; }
+        .prog-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
+        .prog-card { position: relative; height: 500px; overflow: hidden; border-radius: 0; }
+        .prog-img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .prog-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 50px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); color: white; }
+        .prog-card:hover .prog-img { transform: scale(1.1); }
+
+        /* CALL TO ACTION */
+        .cta { background: var(--accent-gold); padding: 100px 8%; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .cta h2 { font-size: 3.5rem; color: var(--primary-dark); margin-bottom: 40px; width: 100%; }
+        .main-btn { background: var(--primary-dark); color: white; padding: 25px 60px; text-decoration: none; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; font-size: 1rem; border-radius: 0; display: inline-block; transition: 0.3s; margin: 0 auto; }
+        .main-btn:hover { background: #000; }
+
+        /* FOOTER */
+        footer { background: #051a0d; color: white; padding: 100px 8% 50px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 80px; margin-bottom: 80px; }
+        .footer-logo { font-size: 1.5rem; font-weight: 800; margin-bottom: 30px; display: block; color: var(--pure-white); text-decoration: none; }
+        .footer-links h4 { color: var(--accent-gold); margin-bottom: 25px; }
+        .footer-links ul { list-style: none; padding: 0; }
+        .footer-links li { margin-bottom: 15px; opacity: 0.7; }
+        .copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px; text-align: center; font-size: 0.8rem; opacity: 0.5; }
+
+        @media (max-width: 1024px) {
+            .obj-grid { grid-template-columns: 1fr 1fr; }
+            .hero h1 { font-size: 3rem; }
+        }
+        @media (max-width: 768px) {
+            .mission, .obj-grid, .prog-grid, .footer-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.5rem; }
+            .stats-bar { flex-direction: column; gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-box">
+            <a href="#" class="logo">STREET HOPE <br><span style="font-size:0.65rem; color:var(--text-muted); font-weight:700;">FOUNDATION NIGERIA</span></a>
+        </div>
+        <div class="nav-links">
+            <div class="dropdown">
+                <button class="dropbtn">Explore Menu ▾</button>
+                <div class="dropdown-content">
+                    <a href="#about">About Us</a>
+                    <a href="#impact">Our Impact</a>
+                    <a href="#work">What We Do</a>
+                </div>
+            </div>
+            <a href="#contact" class="donate-btn-nav">Partner With Us</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="serif">Empowering every child to thrive.</h1>
+            <p>Street Hope Foundation is a global movement for social justice, education, and youth empowerment rooted in the heart of Northern Nigeria.</p>
+            <a href="#work" class="main-btn" style="background: var(--pure-white); color: var(--primary-dark);">Explore Our Work</a>
+        </div>
+    </section>
+
+    <div class="stats-bar">
+        <div class="stat-item"><h2>100%</h2><p>Transparency</p></div>
+        <div class="stat-item"><h2>1,200+</h2><p>Children Reached</p></div>
+        <div class="stat-item"><h2>15+</h2><p>Active Programs</p></div>
+    </div>
+
+    <section class="mission" id="about">
+        <div>
+            <span class="section-tag">Our Institutional Mission</span>
+            <h2>We believe in the power of social change.</h2>
+            <p>Street Hope Development and Charity Foundation is a professional non-profit organization dedicated to improving the lives of vulnerable children, youth, and marginalized communities.</p>
+            <p>Through strategic education, advocacy, and community empowerment, we dismantle the barriers to progress for the disadvantaged in Nigeria.</p>
+        </div>
+        <div style="background: var(--light-gray); padding: 60px; border-radius: 0;">
+            <h3 class="serif" style="color: var(--primary-brand); font-size: 1.8rem; margin-top: 0;">"Our mission is to build a safer, more inclusive society through measurable humanitarian interventions."</h3>
+        </div>
+    </section>
+
+    <section class="objectives" id="impact">
+        <span class="section-tag">Aims & Objectives</span>
+        <h2 class="section-title serif">Our Strategic Framework</h2>
+        
+        <div class="obj-grid">
+            <div class="obj-item">
+                <span class="obj-num">01 / EMPOWERMENT</span>
+                <h3>Youth Self-Reliance</h3>
+                <p>Equipping young leaders with the vocational tools and mentorship required to transition from vulnerability to economic independence.</p>
+            </div>
+            <div class="obj-item">
+                <span class="obj-num">02 / PROTECTION</span>
+                <h3>Child Welfare Systems</h3>
+                <p>Advocating for institutional protections and safe environments where every child's fundamental rights are respected.</p>
+            </div>
+            <div class="obj-item">
+                <span class="obj-num">03 / EDUCATION</span>
+                <h3>Barrier-Free Learning</h3>
+                <p>Providing scholarships and resources to ensure education is a right, not a privilege, for marginalized communities.</p>
+            </div>
+            <div class="obj-item">
+                <span class="obj-num">04 / SUSTAINABILITY</span>
+                <h3>Community Integration</h3>
+                <p>Fostering local development through programs that strengthen community bonds and promote collective resilience.</p>
+            </div>
+            <div class="obj-item">
+                <span class="obj-num">05 / ADVOCACY</span>
+                <h3>Policy & Awareness</h3>
+                <p>Driving large-scale awareness campaigns that mobilize public and government support for social justice and humanitarian aid.</p>
+            </div>
+            <div class="obj-item" style="background: var(--primary-dark); border-bottom-color: white;">
+                <span class="obj-num" style="color: white;">06 / PARTNERSHIP</span>
+                <h3 style="color: white;">Global Collaboration</h3>
+                <p style="color: rgba(255,255,255,0.7);">Working alongside international donors and local stakeholders to scale our impact across the region.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="programs" id="work">
+        <span class="section-tag">Programs in Action</span>
+        <h2 class="section-title serif">How We Create Change</h2>
+        <div class="prog-grid">
+            <div class="prog-card">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" class="prog-img" alt="Education">
+                <div class="prog-overlay">
+                    <h3>Educational Equity</h3>
+                    <p>Providing the tools for academic excellence in underserved areas.</p>
+                </div>
+            </div>
+            <div class="prog-card">
+                <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=800&q=80" class="prog-img" alt="Youth Empowerment">
+                <div class="prog-overlay">
+                    <h3>Skills & Innovation</h3>
+                    <p>Training the next generation of entrepreneurs in Kano State.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta" id="contact">
+        <h2 class="serif">Partner with us to transform lives.</h2>
+        <a href="mailto:Info@streethopefoundation.org" class="main-btn">Become a Partner</a>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <a href="#" class="footer-logo">STREET HOPE FOUNDATION</a>
+                <p style="opacity: 0.6;">Dedicated to child welfare, education, and youth empowerment. Based in Kano, Nigeria, serving the marginalized with global standards of excellence.</p>
+            </div>
+            <div class="footer-links">
+                <h4>QUICK LINKS</h4>
+                <ul>
+                    <li>Impact Reports</li>
+                    <li>Our Programs</li>
+                    <li>Board of Trustees</li>
+                    <li>Transparency Policy</li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>CONTACT</h4>
+                <ul>
+                    <li>No 7 Social Insurance Road, Kano</li>
+                    <li>Info@streethopefoundation.org</li>
+                    <li>Nigeria, West Africa</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Street Hope Development and Charity Foundation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
